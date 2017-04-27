@@ -1,75 +1,70 @@
 ---
-title: Le Wagon Middleman Airbnb
+title: MVP en 1 jour
 ---
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'banner.jpg' %>);">
   <div class="banner-content">
-    <h1>WELCOME HOME</h1>
-    <p>Rent unique places to stay from local hosts in 190+ countries.</p>
-    <form action="#" class="form-inline">
-      <input type="text" class="form-control input-lg" placeholder="checkin">
-      <input type="text" class="form-control input-lg" placeholder="checkout">
-      <select name="" id="" class="form-control input-lg">
-        <option value="1">1 person</option>
-        <option value="2">2 persons</option>
-        <option value="3">3 persons</option>
-      </select>
-      <input type="submit" class="btn btn-primary btn-lg" value="Search">
-    </form>
+    <h1>Ton MVP en 1 jour</h1>
+    <p>On passe 12 heures non stop ensemble pour coder ton MVP 😎</p>
   </div>
 </div>
+
 <div class="container text-center padded features">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <img src="images/globe.png" alt="">
-      <h2>Discover the world</h2>
-      <p>The earth is your new home.</p>
+      <h2>Tu viens avec ton projet 💡</h2>
+      <p>Idée, user story, mock-ups</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <img src="images/dollar.png" alt="">
-      <h2>Pay online</h2>
-      <p>No cash issues anymore.</p>
+      <h2>On se donne rendez-vous 🕗</h2>
+      <p>J'espère que t'es du matin...</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <img src="images/beer.png" alt="">
-      <h2>Meet people</h2>
-      <p>Discover new culture and lifestyle.</p>
+      <h2>Je code comme un fou 🤖</h2>
+      <p></p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <img src="images/heart.png" alt="">
-      <h2>Share and love</h2>
-      <p>Join a community you will love.</p>
+      <h2>Tu repars avec ton MVP 😁</h2>
+      <p>"L'aventure commence !"</p>
     </div>
   </div>
 </div>
-<div class="wrapper-grey padded">
-  <div class="container">
-    <h2 class="text-center">Your next trip</h2>
-    <div class="row">
-      <% data.flats.each do |owner, flat| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path flat.picture %>');">
-          <div class="card-category"><%= flat.city %></div>
-          <div class="card-description">
-            <h2><%= flat.name %></h2>
-            <p><%= flat.description %></p>
-          </div>
-          <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
-          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="text-center padded">
+        <div id="wufoo-z2ph8231u6nu2m">
+          Fill out my <a href="https://fcatuhe.wufoo.com/forms/z2ph8231u6nu2m">online form</a>.
         </div>
+
+        <script type="text/javascript">
+          var z2ph8231u6nu2m;(function(d, t) {
+          var s = d.createElement(t), options = {
+          'userName':'fcatuhe',
+          'formHash':'z2ph8231u6nu2m',
+          'autoResize':true,
+          'height':'379',
+          'async':true,
+          'host':'wufoo.com',
+          'header':'show',
+          'ssl':true};
+          s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+          s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+          try { z2ph8231u6nu2m = new WufooForm();z2ph8231u6nu2m.initialize(options);z2ph8231u6nu2m.display(); } catch (e) {}};
+          var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+          })(document, 'script');
+        </script>
       </div>
-      <% end %>
+
     </div>
   </div>
 </div>
 
-<div class="text-center padded" id="newsletter">
-  <h2>Get news from us</h2>
-  <p>Leave us your mail and get news from us</p>
-  <form class="form-inline">
-    <input type="email" placeholder="bob@gmail.com" class="form-control">
-    <input type="submit" value="Subscribe" class="btn btn-primary">
-  </form>
+<div style="width: 100%; height: 500px; background-image: url(<%= image_path 'louvres.jpg' %>); background-size: cover">
 </div>
-
-<%= partial "map" %>
