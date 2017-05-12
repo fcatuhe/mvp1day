@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><%= current_page.data.title || "MVP en 1 jour" %></title>
+    <title><%= "#{current_page.data.title} | mvp1day" || "mvp1day" %></title>
     <meta property="og:title" content="Ton MVP codé en 1 jour" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://mvp1day.com/" />
-    <!-- <meta property="og:image" content="" /> -->
+    <meta property="og:url" content="https://mvp1day.com" />
+    <meta property="og:image" content="<%= image_path 'banner.jpg' %>" />
     <meta property="og:description" content="On travaille 10 heures non stop ensemble pour coder ton MVP 😎" />
-    <meta property="og:site_name" content="MVP en 1 jour" />
+    <meta property="og:site_name" content="mvp1day" />
 
     <%= stylesheet_link_tag "all" %>
 
